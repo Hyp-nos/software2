@@ -10,8 +10,6 @@ import org.simpleframework.xml.Root;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
 
-import com.sun.tracing.dtrace.Attributes;
-
 /**
  * A simple example showing how to encapsulate messages in a class. This class sends and receives
  * some simple data via sockets. The data is formatted in XML.

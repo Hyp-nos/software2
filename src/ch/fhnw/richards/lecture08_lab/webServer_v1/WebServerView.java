@@ -1,4 +1,4 @@
-package ch.fhnw.richards.lecture09_threads.webServer_v2;
+package ch.fhnw.richards.lecture08_lab.webServer_v1;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -27,7 +27,7 @@ public class WebServerView {
         this.model = model;
         this.txtLog = txtLog;
         
-        stage.setTitle("Web Server v2");
+        stage.setTitle("Web Server v1");
         
         BorderPane root = new BorderPane();
 

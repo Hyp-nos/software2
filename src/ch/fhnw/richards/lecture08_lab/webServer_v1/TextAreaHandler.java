@@ -1,4 +1,4 @@
-package ch.fhnw.richards.lecture09_threads.webServer_v2;
+package ch.fhnw.richards.lecture08_lab.webServer_v1;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

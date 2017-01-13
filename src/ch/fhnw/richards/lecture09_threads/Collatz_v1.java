@@ -1,4 +1,4 @@
-package ch.fhnw.richards.lecture10_threads;
+package ch.fhnw.richards.lecture09_threads;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,13 +1,13 @@
-package ch.fhnw.richards.lecture10_threads;
+package ch.fhnw.richards.lecture09_threads;
 
-public class ThreadStopper extends Thread {
+public class ThreadStopperObject extends Thread {
 	private TestThread t;
 	
 	public static void main(String[] args) {
-		new ThreadStopper();
+		new ThreadStopperObject();
 	}
 	
-	private ThreadStopper() {
+	private ThreadStopperObject() {
 		t = new TestThread();
 		t.start();
 		this.start();
@@ -35,7 +35,7 @@ public class ThreadStopper extends Thread {
 	}	
 	
 	private static class TestThread extends Thread {
-		private boolean stop = false; // may not stop unless this is "volatile"
+		private Boolean stop = false; // may not stop unless this is "volatile"
 		private int counter;
 		
 		@Override

@@ -1,4 +1,4 @@
-package ch.fhnw.richards.lecture09_threads.webServer_v2;
+package ch.fhnw.richards.lecture08_lab.webServer_v1;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
  * actually send files, rather than just echoing requests. This only involves
  * changes in the Model.
  */
-public class WebServer_v2 extends Application {
+public class WebServer_v1 extends Application {
     private WebServerView view;
     private WebServerController controller;
     private WebServerModel model;

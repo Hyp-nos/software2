@@ -1,4 +1,4 @@
-package ch.fhnw.richards.lecture10_threads;
+package ch.fhnw.richards.lecture09_threads;
 
 /**
  * This program demonstrates the need for synchronization. It creates several

@@ -1,4 +1,4 @@
-package ch.fhnw.richards.lecture10_threads;
+package ch.fhnw.richards.lecture09_threads;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -63,13 +63,15 @@ public class Collatz_v2 {
 				while (numbers.size() > 0) {
 					count++;
 
-					int size = numbers.size();
-
-					// Choose value to modify, and modify it
-					int index = (int) (Math.random() * size);
-					Long value = numbers.get(index);
-					if (value > 1)
-						numbers.set(index, modifyValue(value));
+					synchronized (numbers) {
+						int size = numbers.size();
+						if (size > 0) {
+							// Choose value to modify, and modify it
+							int index = (int) (Math.random() * size);
+							Long value = numbers.get(index);
+							if (value > 1) numbers.set(index, modifyValue(value));
+						}
+					}
 				}
 				System.out.println("Modifier finished after " + count + " executions");
 			} catch (Exception e) {
@@ -103,9 +105,10 @@ public class Collatz_v2 {
 					count++;
 
 					for (Iterator<Long> i = numbers.iterator(); i.hasNext();) {
-						Long value = i.next();
-						if (value == 1)
-							i.remove();
+						synchronized (numbers) {
+							Long value = i.next();
+							if (value == 1) i.remove();
+						}
 					}
 
 					try {
