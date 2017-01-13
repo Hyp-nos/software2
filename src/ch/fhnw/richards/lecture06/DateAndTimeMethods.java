@@ -47,7 +47,7 @@ public class DateAndTimeMethods {
      * Example: Time 02:30:45 should return a result of 2 * 3600 + 30 * 60 + 45 = 9045
      */
     public static int timeToSeconds(int hour, int minute, int second) throws Exception {
-        if (second < 0 || second > 59) throw new Exception("minute out of range");
+        if (second < 0 || second > 59) throw new Exception("second out of range");
         if (minute < 0 || minute > 59) throw new Exception("minute out of range");
         if (hour < 0 || hour > 24) throw new Exception("hour out of range");
 

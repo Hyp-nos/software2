@@ -31,12 +31,14 @@ public class FactoryExample {
 			
 		}
 		
-		if(enemyShipOption.equals("U")){
+		if(enemyShipOption.equalsIgnoreCase("U")){
 			theEnemy= new UFOEnemyShip();
 		}
-		if (enemyShipOption.equals("R")){
+		if (enemyShipOption.equalsIgnoreCase("R")){
 			theEnemy = new RocketEnemyShip();
 		}
+		/*theEnemy.setDamage(50);
+		theEnemy.setName("the destroyer");*/
 		doStuffEnemy(theEnemy);
 		/*
 		 * this is the old way, the best way is to create factory class or method

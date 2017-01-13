@@ -21,7 +21,7 @@ public class StockObserver implements Observer{
 
 		this.observerId= ++observerIDTracker;
 		
-		System.out.println("new Observer"+ this.observerId);
+		System.out.println("new Observer"+ observerId);
 		stockGrabber.register(this);
 		// TODO Auto-generated constructor stub
 	}
